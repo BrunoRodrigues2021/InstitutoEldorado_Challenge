@@ -49,13 +49,13 @@ router.get('/:id', (req, res, next) => {
     });
 });
 
-// PATCH
-router.patch('/:id', (req, res, next) => {
+// PUT
+router.put('/', (req, res, next) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error }) }
         conn.query(
             'UPDATE categories SET name = ? WHERE id = ?',
-            [req.body.name, req.params.id],
+            [req.body.name, req.body.id],
             (error, result, field) => {
                 conn.release();
                 if (error) { res.status(500).send({ error: error, response: null }); }

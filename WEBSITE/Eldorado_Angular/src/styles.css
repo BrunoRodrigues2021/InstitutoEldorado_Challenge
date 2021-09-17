@@ -4,8 +4,45 @@ body {
     background-color: #e7e7e7;
 }
 
+#navbarSupportedContent {
+    background-color: #fff;
+}
+
 .content {
-    background-color: red;
     width: 100%;
+    height: 85vh;
+    margin-top: 15vh;
+    padding: 0;
+}
+
+.container {
+    overflow: auto;
+    width: 70%;
     height: 100%;
+    background-color: #FFF;
+    padding: 0;
+    padding-top: 5vh;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: rgb(133, 210, 255);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    width: 100%;
+    padding: 40px;
 }

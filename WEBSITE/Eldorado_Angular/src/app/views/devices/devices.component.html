@@ -1,0 +1,51 @@
+<div class="content">
+    <div class="container">
+        <table class="table text-center" *ngIf="!statusRegistration">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Part Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of data" (click)="getDataByClick(d.id)">
+                    <th scope="row">{{ d.id }}</th>
+                    <td>{{ d.category }}</td>
+                    <td>{{ d.color }}</td>
+                    <td>{{ d.partNumber }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-container" *ngIf="statusRegistration">
+            <form [formGroup]="form">
+                <div class="form-group">
+                    <input type="hidden" class="form-control" id="id" name="id" formControlName="id" [(ngModel)]="id">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category" name="category" formControlName="category"
+                        [(ngModel)]="category">
+                        <option *ngFor="let c of dataCategory">{{ c.name }}</option>
+                    </select>
+                    <label for="category">Color:</label>
+                    <input type="text" class="form-control" id="color" name="color" formControlName="color"
+                        [(ngModel)]="color">
+                    <label for="category">Part Number:</label>
+                    <input type="text" class="form-control" id="partNumber" name="partNumber"
+                        formControlName="partNumber" [(ngModel)]="partNumber">
+                </div>
+            </form>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn" [ngClass]="{
+                'btn-primary': !statusRegistration,
+                'btn-danger': statusRegistration}" (click)="setStatus();clearForm()">{{
+                (statusRegistration) ? 'Back' : 'New' }}</button>
+            <button type="button" class="btn btn-success" (click)="saveData()"
+                [disabled]="!formIsValid()">Save</button>
+            <button type="button" class="btn btn-danger" (click)="deleteData()" [disabled]="id == 0">Delete</button>
+            <button type="button" class="btn btn-warning" (click)="clearForm()"
+                [disabled]="!statusRegistration">Clear</button>
+        </div>
+    </div>
+</div>

@@ -2,11 +2,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule],
   declarations: [NavbarComponent],
   exports: [NavbarComponent]
 })
