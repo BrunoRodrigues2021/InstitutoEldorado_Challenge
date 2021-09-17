@@ -1,0 +1,21 @@
+.user-card {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../../assets/images/photo.png');
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  

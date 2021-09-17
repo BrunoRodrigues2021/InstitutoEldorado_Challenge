@@ -1,0 +1,17 @@
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <a class="navbar-brand" href="#"><img src="../../../../assets/images/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+    (click)="toggleCollapsed()">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+    <div class="navbar-nav" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+      <a class="nav-item nav-link" [routerLink]="'/dashboard'" routerLinkActive="active">Home <span
+          class="sr-only"></span></a>
+      <a class="nav-item nav-link" [routerLink]="'/devices'" routerLinkActive="active">Devices</a>
+      <a class="nav-item nav-link" [routerLink]="'/categories'" routerLinkActive="active">Categories</a>
+    </div>
+  </div>
+</nav>
