@@ -24,6 +24,10 @@ app.use((req, res, next) => {
 app.use('/categories', routeProducts);
 app.use('/devices', routeRequests);
 
+app.get('/', (req, res) => {
+    return res.json({ message: 'Server online' });
+});
+
 app.use((req, res, next) => {
     const error = new Error('route not find');
     error.status = 404;
