@@ -29,7 +29,7 @@
                 'btn-danger': statusRegistration}" (click)="setStatus();clearForm()">{{
                 (statusRegistration) ? 'Back' : 'New' }}</button>
             <button type="button" class="btn btn-success" (click)="saveData()"
-                [disabled]="formIsValid()">Save</button>
+                [disabled]="!formIsValid()">Save</button>
             <button type="button" class="btn btn-danger" (click)="deleteData()" [disabled]="id == 0">Delete</button>
             <button type="button" class="btn btn-warning" (click)="clearForm()" [disabled]="!statusRegistration">Clear</button>
         </div>

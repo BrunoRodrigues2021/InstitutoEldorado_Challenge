@@ -2,8 +2,8 @@
     "env": {
         "MYSQL_USER": "root",
         "MYSQL_PASSWORD": "brunoo00",
-        "MYSQL_DATABASE": "mydb",
-        "MYSQL_HOST": "localhost",
+        "MYSQL_DATABASE": "eldoradoDB",
+        "MYSQL_HOST": "mysqlserver.copplfbc2czk.sa-east-1.rds.amazonaws.com",
         "MYSQL_PORT": 3306
     }
 }

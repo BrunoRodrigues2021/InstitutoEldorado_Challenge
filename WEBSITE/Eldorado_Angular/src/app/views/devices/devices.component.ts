@@ -124,6 +124,6 @@ export class DevicesComponent implements OnInit {
   }
 
   formIsValid(){
-    return (this.category != '' && this.color != '');
+    return (this.category != '' && this.color != '' && String(this.partNumber) != '');
   }
 }

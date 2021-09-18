@@ -25,24 +25,24 @@
                     <label for="category">Category:</label>
                     <select class="form-control" id="category" name="category" formControlName="category"
                         [(ngModel)]="category">
-                        <option *ngFor="let c of dataCategory">{{ c.name }}</option>
+                        <option *ngFor="let c of dataCategory" [value]="c.name">{{ c.name }}</option>
                     </select>
                     <label for="category">Color:</label>
                     <input type="text" class="form-control" id="color" name="color" formControlName="color"
                         [(ngModel)]="color">
                     <label for="category">Part Number:</label>
                     <input type="text" class="form-control" id="partNumber" name="partNumber"
-                        formControlName="partNumber" [(ngModel)]="partNumber">
+                        formControlName="partNumber" [(ngModel)]="partNumber"
+                        onkeypress="return /[0-9]/i.test(event.key)">
                 </div>
             </form>
         </div>
         <div class="btn-group" role="group">
             <button type="button" class="btn" [ngClass]="{
                 'btn-primary': !statusRegistration,
-                'btn-danger': statusRegistration}" (click)="setStatus();clearForm()">{{
+                'btn-danger': statusRegistration}" (click)="setStatus();">{{
                 (statusRegistration) ? 'Back' : 'New' }}</button>
-            <button type="button" class="btn btn-success" (click)="saveData()"
-                [disabled]="!formIsValid()">Save</button>
+            <button type="button" class="btn btn-success" (click)="saveData()" [disabled]="!formIsValid()">Save</button>
             <button type="button" class="btn btn-danger" (click)="deleteData()" [disabled]="id == 0">Delete</button>
             <button type="button" class="btn btn-warning" (click)="clearForm()"
                 [disabled]="!statusRegistration">Clear</button>
