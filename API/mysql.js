@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
 
 var pool = mysql.createPool({
-    "user": process.env.MYSQL_USER,
-    "password": process.env.MYSQL_PASSWORD,
-    "database": process.env.MYSQL_DATABASE,
-    "host": process.env.MYSQL_HOST,
-    "port": process.env.MYSQL_PORT
+    "user": "root",
+    "password": "brunoo00",
+    "database": "eldoradoDB",
+    "host": "mysqlserver.copplfbc2czk.sa-east-1.rds.amazonaws.com",
+    "port": 3306
 });
 
 exports.pool = pool;
