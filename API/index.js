@@ -25,7 +25,7 @@ app.use('/categories', routeProducts);
 app.use('/devices', routeRequests);
 
 app.get('/', (req, res) => {
-    return res.json({ message: 'Server online' });
+    return res.json({ message: 'Server is online' });
 });
 
 app.use((req, res, next) => {
