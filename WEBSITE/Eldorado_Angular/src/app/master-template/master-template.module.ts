@@ -1,4 +1,4 @@
-import { DashboardComponent } from './../views/dashboard/dashboard.component';
+import { HomeComponent } from './../views/home/home.component';
 import { MasterTemplateRoutes } from './master-template.routing';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -12,7 +12,7 @@ import { DevicesService } from '../views/devices/devices.service';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,

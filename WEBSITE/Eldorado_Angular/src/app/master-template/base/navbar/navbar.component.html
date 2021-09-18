@@ -6,9 +6,9 @@
     <span class="navbar-toggler-icon"></span>
 
   </button>
-  <div id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+  <div id="navbarSupportedContent" class="collapse" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
     <div class="navbar-nav" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
-      <a class="nav-item nav-link" [routerLink]="'/dashboard'" routerLinkActive="active">Home <span
+      <a class="nav-item nav-link" [routerLink]="'/home'" routerLinkActive="active">Home <span
           class="sr-only"></span></a>
       <a class="nav-item nav-link" [routerLink]="'/devices'" routerLinkActive="active">Devices</a>
       <a class="nav-item nav-link" [routerLink]="'/categories'" routerLinkActive="active">Categories</a>

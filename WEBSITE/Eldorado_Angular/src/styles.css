@@ -46,3 +46,10 @@ tbody tr:hover {
     width: 100%;
     padding: 40px;
 }
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+}
