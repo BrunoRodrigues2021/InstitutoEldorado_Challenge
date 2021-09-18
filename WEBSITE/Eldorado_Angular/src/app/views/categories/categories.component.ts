@@ -99,13 +99,13 @@ export class CategoriesComponent implements OnInit {
   }
 
   getDataByClick(id: number) {
-      this.statusRegistration = true!;
-      this.id = this.data.find(el => el.id === id)?.id!;
-      this.name = this.data.find(el => el.id === id)?.name!;
+    this.statusRegistration = true!;
+    this.id = this.data.find(el => el.id === id)?.id!;
+    this.name = this.data.find(el => el.id === id)?.name!;
   }
 
-  formIsValid(){
-    return (this.name != '');
+  formIsValid() {
+    return (this.name != '' && this.name != null);
   }
 
 }

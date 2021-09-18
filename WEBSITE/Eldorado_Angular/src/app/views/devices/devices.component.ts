@@ -45,7 +45,6 @@ export class DevicesComponent implements OnInit {
       id: 0,
       name: ''
     });
-    this.statusRegistration = false;
   }
 
   setStatus() {
@@ -124,6 +123,6 @@ export class DevicesComponent implements OnInit {
   }
 
   formIsValid(){
-    return (this.category != '' && this.color != '' && String(this.partNumber) != '');
+    return (this.category != '' && this.color != '' && String(this.partNumber) != '' && this.category != null && this.color != null && String(this.partNumber) != null);
   }
 }
