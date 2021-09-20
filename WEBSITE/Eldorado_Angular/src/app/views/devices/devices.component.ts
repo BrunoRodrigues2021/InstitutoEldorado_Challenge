@@ -84,6 +84,7 @@ export class DevicesComponent implements OnInit {
           console.error(error);
           this.getData();
           this.clearForm();
+          this.statusRegistration = false;
         }
       );
     } else {
@@ -110,6 +111,7 @@ export class DevicesComponent implements OnInit {
         console.error(error);
         this.getData();
         this.clearForm();
+        this.statusRegistration = false;
       }
     );
   }
