@@ -43,7 +43,9 @@ export class DevicesComponent implements OnInit {
   clearForm() {
     this.form.reset({
       id: 0,
-      name: ''
+      category: null,
+      color: '',
+      partNumber: 0
     });
   }
 
@@ -81,7 +83,6 @@ export class DevicesComponent implements OnInit {
           console.log(retorno);
         },
         (error: any) => {
-          console.error(error);
           this.getData();
           this.clearForm();
           this.statusRegistration = false;
@@ -97,6 +98,7 @@ export class DevicesComponent implements OnInit {
           console.error(error);
           this.getData();
           this.clearForm();
+          this.statusRegistration = false;
         }
       );
     }
@@ -117,14 +119,14 @@ export class DevicesComponent implements OnInit {
   }
 
   getDataByClick(id: number) {
-      this.statusRegistration = true!;
-      this.id = this.data.find(el => el.id === id)?.id!;
-      this.category = this.data.find(el => el.id === id)?.category!;
-      this.color = this.data.find(el => el.id === id)?.color!;
-      this.partNumber = this.data.find(el => el.id === id)?.partNumber!;
+    this.statusRegistration = true!;
+    this.id = this.data.find(el => el.id === id)?.id!;
+    this.category = this.data.find(el => el.id === id)?.category!;
+    this.color = this.data.find(el => el.id === id)?.color!;
+    this.partNumber = this.data.find(el => el.id === id)?.partNumber!;
   }
 
-  formIsValid(){
+  formIsValid() {
     return (this.category != '' && this.color != '' && String(this.partNumber) != '' && this.category != null && this.color != null && String(this.partNumber) != null);
   }
 }

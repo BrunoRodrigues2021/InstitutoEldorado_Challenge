@@ -33,7 +33,7 @@
                     <label for="category">Part Number:</label>
                     <input type="text" class="form-control" id="partNumber" name="partNumber"
                         formControlName="partNumber" [(ngModel)]="partNumber"
-                        onkeypress="return /[0-9]/i.test(event.key)">
+                        onkeypress="return /[0-9]/i.test(event.key)" required>
                 </div>
             </form>
         </div>
